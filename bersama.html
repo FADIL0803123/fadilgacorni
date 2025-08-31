@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Fadil</title>
+    <style>
+    .tab {
+      overflow: hidden;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+    .tab button {
+      background: #f1f1f1;
+      border: none;
+      outline: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    .tab button:hover {
+      background: #ddd;
+    }
+    .tabcontent {
+      display: none;
+      padding: 10px;
+    }
+    .container {
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+    }
+    .main-content {
+      flex: 2;
+    }
+    .side-content {
+      flex: 1;
+      min-width: 180px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      padding: 10px;
+      border: 1px solid #eee;
+    }
+    </style>
+</head>
+<body>
+<script>
+function openTab(tabName) {
+  let i, tabcontent;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
+<H1 style="text-align: center;">Daily In Fadil</H1>
+
+<div class="tab">
+  <button onclick="openTab('makanan')">Makanan Favorit</button>
+  <button onclick="openTab('Keseharian')">Keseharian</button>
+  <button onclick="openTab('hobi')">Hobi</button>
+</div>
+
+<div class="container">
+  <div id="main" class="tabcontent main-content" style="display:block;">
+    <h4>Daftar</h4>
+    <ul>
+      <li>Makanan Favorit:</li>
+      <li>Keseharian:</li>
+      <li>Hobi:</li>
+    </ul>
+    <hr>
+    <img src="Dailyfoto/burung.jpg" alt="foto fadil" width="200px" height="200px">
+    <p>Motto: Jadilah seperti burung terbang setinggi tingginya jangan seperti ayam meski memiliki sayap tidak bisa terbang untuk meraih cita cita mu</p>
+  </div>
+  <div id="makanan" class="tabcontent side-content">
+    <button onclick="openTab('main')" style="margin-bottom:10px;">&larr; Back</button>
+    <h4>Makanan Favorit</h4>
+    <h1 style="text-align: center;">MAKANAN FAVORIT</h1>
+    <ol>
+        <li>Kebab</li>
+        <img src="Dailyfoto/kebab.jpg" alt="kebab" width="500px" height="250px">
+        <p>kenapa saya suka kebab? karena kebab itu rasanya enak gitu aja si awkakwk</p>
+        <li>rendang</li>
+        <img src="Dailyfoto/rendang.jpg" alt="rendang" width="500px" height="250px">
+        <p>saya suka rendang karena bumbunya enak banget dan daging nya ga keras suka banget aku</p>
+    </ol>
+    <h3 style="text-align: center;"> Udah sekian dari saya segitu aja </h3>
+  </div>
+  <div id="Keseharian" class="tabcontent side-content">
+    <button onclick="openTab('main')" style="margin-bottom:10px;">&larr; Back</button>
+    <h4>Keseharian</h4>
+    <h1 style="text-align: center;">KESEHARIAN</h1>
+    <p>Setiap hari saya bangun tidur jam 3  pagi lalu saya mandi terus saya sarapan setelah itu saya berangkat ke sekolah jam 5.45 sampai di sekolah saya langsung masuk kelas lalu belajar sampai jam 15.10 sore setelah itu saya pulang kerumah lalu saya makan terus saya istirahat sebentar setelah itu saya mengerjakan tugas sekolah lalu saya bermain game sampai larut malam setelah bermain saya langsung tidur</p>
+    <h3 style="text-align: center;"> Udah sekian dari saya segitu aja </h3>
+  </div>
+  <div  id="hobi" class="tabcontent side-content">
+    <button onclick="openTab('main')" style="margin-bottom:10px;">&larr; Back</button>
+    <h4>Hobi</h4>
+    <h1 style="text-align: center;">HOBI</h1>
+    <p>Hobi saya Touring karena touring tuh seru banget banyak banget moment moment yang aku rasakan asli ga boong</p>
+    <h3 style="text-align: center;"> Udah sekian dari saya segitu aja </h3>
+  </div>
+</div>
+</body>
+</html>
